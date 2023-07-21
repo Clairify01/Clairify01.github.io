@@ -1,15 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative; /* Allows for absolute positioning within */
+    background-color: rgb(120, 110, 253);
+}
+
 spline-viewer {
     height: 100vh;
     padding: 0;
     margin: 0;
+    position: fixed; /* Places viewer on top of other content */
+    z-index: -1; /* Places viewer below all other content */
+    pointer-events: none; /* Disables interactions */
 }
 
-body {
-    padding: 0;
-    margin: 0;
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
-.footer {
+/* .footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -18,4 +30,122 @@ body {
     background-color: #333;
     color: #fff;
     text-align: center;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    height: 2.5em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-icons, .dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+.icon-button img {
+    width: 2em;
+    height: 2em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo {
+    height: 2.5em;
+}
+
+.landing-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.landing {
+    width: 35%;
+    padding: 0 20px;
+}
+
+.about-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.about {
+    width: 35%;
+    padding: 0 20px;
+    text-align: right;
+}
+
+.team-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.team {
+    width: 35%;
+    padding: 0 20px;
+}
+
+.join-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.join {
+    width: 35%;
+    padding: 0 20px;
+    text-align: right;
 }
