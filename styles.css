@@ -2,7 +2,19 @@ body {
     padding: 0;
     margin: 0;
     position: relative; /* Allows for absolute positioning within */
-    background-color: rgb(120, 110, 253);
+    background-color: #FFBB5D;
+    font-family: 'poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(86, 86, 86);
 }
 
 spline-viewer {
@@ -41,6 +53,7 @@ section {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 .logo {
@@ -101,16 +114,21 @@ section {
 }
 
 .landing-section {
+    width: 60%;
+    background-color: #f5f5f5;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: start;
+    clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%);
+    z-index: -1;
 }
 
 .landing {
-    width: 35%;
-    padding: 0 20px;
+    width: 45%;
+    padding: 0 3rem;
 }
+
 
 .about-section {
     height: 100vh;
@@ -148,4 +166,24 @@ section {
     width: 35%;
     padding: 0 20px;
     text-align: right;
+}
+
+.discord-button {
+    background-color: #7289da; /* Discord's brand color */
+    border: none;
+    color: white; /* Text color */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: white; /* On hover, make the background white */
+    color: #7289da; /* On hover, make the text Discord's brand color */
 }
