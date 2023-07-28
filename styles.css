@@ -2,35 +2,20 @@ body {
     padding: 0;
     margin: 0;
     position: relative; /* Allows for absolute positioning within */
-    background-color: #FFBB5D;
     font-family: 'poppins', sans-serif;
 }
 
 h1 {
+    margin: 1rem 0;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 p {
+    margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 400;
     color: rgb(86, 86, 86);
-}
-
-spline-viewer {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    position: fixed; /* Places viewer on top of other content */
-    z-index: -1; /* Places viewer below all other content */
-    pointer-events: none; /* Disables interactions */
-}
-
-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: start;
 }
 
 /* .footer {
@@ -44,52 +29,60 @@ section {
     text-align: center;
 } */
 
+
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
-    background-color: #f5f5f5;
+    background-color: #53BDBA;
     position: fixed;
-    top: 0;
     width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
     z-index: 100;
 }
 
 .logo {
-    height: 2.5em;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.left-icons, .dropdown {
+.left-icons, .right-icons {
     display: flex;
     align-items: center;
 }
 
 .icon-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     margin-right: 1em;
 }
 
-.icon-button img {
-    width: 2em;
-    height: 2em;
+.icon-button:hover {
+    background-color: #ddd;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.icon-button i {
+    margin-right: 10px;  
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
+    left: 0;
+    top: 100%;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -105,29 +98,75 @@ section {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.left-icons:hover .dropdown-content {
     display: block;
 }
 
-.logo {
-    height: 2.5em;
+
+
+
+
+
+
+spline-viewer {
+    background-color: #FFBB5D;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Places viewer on top of other content */
+    z-index: -1; /* Places viewer below all other content */
+    pointer-events: none; /* Disables interactions */
 }
+
 
 .landing-section {
-    width: 60%;
-    background-color: #f5f5f5;
+    width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%);
-    z-index: -1;
 }
 
-.landing {
+.landing-div {
+    background-color: #FFEED5;
+    height: 100vh;
+    width: 60%;
+    clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+}
+
+.landing-contentbox {
     width: 45%;
     padding: 0 3rem;
 }
+
+.discord-button {
+    background-color: #7289da; /* Discord's brand color */
+    display: inline-flex;  /* Added this line */
+    align-items: center;
+    border: none;
+    color: white; /* Text color */
+    margin: 1rem 0;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: white; /* On hover, make the background white */
+    color: #7289da; /* On hover, make the text Discord's brand color */
+}
+
+.discord-button i {
+    font-size: 32px;
+    margin-right: 16px;
+}
+
+
+
+
 
 
 .about-section {
@@ -166,24 +205,4 @@ section {
     width: 35%;
     padding: 0 20px;
     text-align: right;
-}
-
-.discord-button {
-    background-color: #7289da; /* Discord's brand color */
-    border: none;
-    color: white; /* Text color */
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.discord-button:hover {
-    background-color: white; /* On hover, make the background white */
-    color: #7289da; /* On hover, make the text Discord's brand color */
 }
