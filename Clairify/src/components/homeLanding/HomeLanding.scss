@@ -1,0 +1,110 @@
+@import '../../styles/colors.scss';
+
+.container, .row, .col {
+  margin: 0;
+  padding: 0;
+}
+
+.home-landing {
+  height: 100vh;
+  width: 100%;
+  background-color: $orange_dark;
+  color: $orange_light;
+  margin: 0;
+
+  .home-landing-container {
+    height: 100%;
+    width: 100%;
+	margin: 0;
+
+	.home-landing-container-text {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background-color: $light;
+		color: $dark;
+		z-index: 3;
+		box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.5);
+		
+		.home-landing-container-text-content {
+			width: 90%;
+			background-color: $light;
+			color: $dark;
+			padding: 0 $viewport-padding;
+			
+			
+			.title {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem 0;
+				color: $dark;
+			}
+			
+			.text {
+				max-width: 70%;
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+				font-weight: 300;
+				color: $grey;
+			}
+
+			.discord-button {
+				display: inline-flex;
+				align-items: center;
+
+				background-color: $discord;
+				color: $light;
+				margin: 1rem 0;
+				padding: 16px 32px; /* Adjust this padding to get the desired width relative to text */
+				
+				text-align: center;
+				text-decoration: none;
+				font-size: 1rem;
+				font-weight: 500;
+				
+				cursor: pointer;
+				transition: background-color 0.3s ease, color 0.3s ease;
+
+				border-radius: 10px;
+				border-color: $discord;
+				border-width: 2px;
+			}
+			
+			.discord-button:hover {
+				background-color: $light; /* On hover, make the background white */
+				color: $discord; /* On hover, make the text Discord's brand color */
+			}
+
+			.discord-button .discord-icon {
+				font-size: 32px;
+				margin-right: 16px;
+			}
+		}
+	}
+
+	.home-landing-container-scene {
+		position: relative; // This allows child elements with absolute positioning to be positioned relative to this container
+		height: 100%;
+		width: 100%;
+		background-color: $orange_dark;
+		z-index: 2;
+	  
+		.foreground-1 {
+		  position: absolute;
+		  height: 100%;
+		  width: 100%;
+		  background-color: $orange_light;
+		  clip-path: polygon(30% 0, 0 0, 0 60%);
+		  filter: drop-shadow(20px 0px 8px rgba(0, 0, 0, 0.5));
+		}
+		.foreground-2 {
+		  position: absolute;
+		  height: 100%;
+		  width: 100%;
+		  background-color: $orange_light;
+		  clip-path: polygon(0 100%, 100% 100%, 0 75%);
+		  filter: drop-shadow(20px 0px 8px rgba(0, 0, 0, 0.5));
+		}
+	  }
+  }
+}

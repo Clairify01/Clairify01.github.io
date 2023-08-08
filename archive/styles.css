@@ -18,7 +18,7 @@ p {
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 400;
-    color: rgb(86, 86, 86);
+    color: #565656;
 }
 
 
@@ -285,6 +285,10 @@ spline-viewer {
     justify-content: right;  /* Aligns the text to the right */
     padding-right: 4rem;  /* Optional: for some padding on the right */
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.team-content-join {
+    text-align: right;
 }
 
 

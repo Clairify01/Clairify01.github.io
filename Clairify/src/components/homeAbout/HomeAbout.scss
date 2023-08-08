@@ -1,0 +1,75 @@
+@import '../../styles/colors.scss';
+
+.container, .row, .col {
+  margin: 0;
+  padding: 0;
+}
+
+.home-about {
+  height: 100vh;
+  width: 100%;
+  background-color: $orange_dark;
+  color: $orange_light;
+  margin: 0;
+
+  .home-about-container {
+    height: 100%;
+    width: 100%;
+	margin: 0;
+
+	.home-about-container-scene {
+		position: relative; // This allows child elements with absolute positioning to be positioned relative to this container
+		height: 100%;
+		width: 100%;
+		background-color: $teal_light;
+		z-index: 2;
+	  
+		.foreground-1 {
+		  height: 100%;
+		  width: 100%;
+		  background-color: $teal_dark;
+		  clip-path: ellipse(40% 60% at 50% 50%);
+		  filter: drop-shadow(20px 0px 8px rgba(0, 0, 0, 0.5));
+		  z-index: 1;
+		}
+	}
+    .home-about-container-text {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background-color: $light;
+		color: $dark;
+		z-index: 3;
+		box-shadow: -4px 0 8px 0 rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: flex-end;
+		
+		.home-about-container-text-content {
+			width: 90%;
+			background-color: $light;
+			color: $dark;
+			padding: 0 $viewport-padding;
+			text-align: right;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			
+			
+			.title {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem 0;
+				color: $dark;
+			}
+			
+			.text {
+				max-width: 70%;
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+				font-weight: 300;
+				color: $grey;
+			}
+		}
+	}
+  }
+}
