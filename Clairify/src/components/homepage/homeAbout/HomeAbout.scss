@@ -1,15 +1,8 @@
-@import '../../styles/colors.scss';
-
-.container, .row, .col {
-  margin: 0;
-  padding: 0;
-}
+@import '../../../styles/colors.scss';
 
 .home-about {
   height: 100vh;
   width: 100%;
-  background-color: $orange_dark;
-  color: $orange_light;
   margin: 0;
 
   .home-about-container {

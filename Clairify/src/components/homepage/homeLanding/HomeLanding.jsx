@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import './HomeLanding.scss'
 import { LinkContainer } from 'react-router-bootstrap'
 import { BiLogoDiscordAlt } from 'react-icons/bi';
-import SceneLanding from '../splineScenes/SceneLanding';
+import SceneLanding from '../splineSceneLanding/SceneLanding';
 
 
 const HomeLanding = () => {

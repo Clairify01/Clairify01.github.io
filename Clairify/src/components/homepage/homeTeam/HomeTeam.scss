@@ -1,0 +1,168 @@
+@import '../../../styles/colors.scss';
+
+.home-team {
+  height: 50vh;
+  width: 100%;
+  margin: 0;
+
+  .home-team-container {
+    height: 100%;
+    width: 100%;
+	margin: 0;
+
+	.home-team-container-text {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background-color: $light;
+		color: $dark;
+		z-index: 3;
+		box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.5);
+		
+		.home-team-container-text-content {
+			width: 90%;
+			background-color: $light;
+			color: $dark;
+			padding: 0 $viewport-padding;
+			
+			
+			.title {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem 0;
+				color: $dark;
+			}
+			
+			.text {
+				max-width: 70%;
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+				font-weight: 300;
+				color: $grey;
+			}
+
+			.team-button {
+				display: inline-flex;
+				align-items: center;
+
+				background-color: $teal_dark;
+				color: $light;
+				margin: 1rem 0;
+				padding: 16px 32px; /* Adjust this padding to get the desired width relative to text */
+				
+				text-align: center;
+				text-decoration: none;
+				font-size: 1rem;
+				font-weight: 500;
+				
+				cursor: pointer;
+				transition: background-color 0.3s ease, color 0.3s ease;
+
+				border-radius: 10px;
+				border-color: $teal_dark;
+				border-width: 2px;
+			}
+			
+			.team-button:hover {
+				background-color: $light; /* On hover, make the background white */
+				color: $teal_dark; /* On hover, make the text Discord's brand color */
+			}
+		}
+	}
+
+	.home-team-container-scene {
+		position: relative; // This allows child elements with absolute positioning to be positioned relative to this container
+		height: 100%;
+		width: 100%;
+		background-color: $orange_light;
+		z-index: 2;
+	  }
+  }
+}
+
+.home-join {
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+  
+    .home-join-container {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+  
+      .home-join-container-text {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          background-color: $light;
+          color: $dark;
+          z-index: 3;
+          box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.5);
+          display: flex;
+		justify-content: flex-end;
+          
+          .home-join-container-text-content {
+              width: 90%;
+              background-color: $light;
+              color: $dark;
+              padding: 0 $viewport-padding;
+			  text-align: right;
+			  display: flex;
+			  flex-direction: column;
+			  align-items: flex-end;
+              
+              
+              .title {
+                  font-size: 2rem;
+                  font-weight: bold;
+                  margin: 1rem 0;
+                  color: $dark;
+              }
+              
+              .text {
+                  max-width: 70%;
+                  font-size: 1.2rem;
+                  margin-bottom: 1rem;
+                  font-weight: 300;
+                  color: $grey;
+              }
+  
+              .apply-button {
+                  display: inline-flex;
+                  align-items: center;
+  
+                  background-color: $orange_dark;
+                  color: $light;
+                  margin: 1rem 0;
+                  padding: 16px 32px; /* Adjust this padding to get the desired width relative to text */
+                  
+                  text-align: center;
+                  text-decoration: none;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  
+                  cursor: pointer;
+                  transition: background-color 0.3s ease, color 0.3s ease;
+  
+                  border-radius: 10px;
+                  border-color: $orange_dark;
+                  border-width: 2px;
+              }
+              
+              .apply-button:hover {
+                  background-color: $light; /* On hover, make the background white */
+                  color: $orange_dark; /* On hover, make the text Discord's brand color */
+              }
+          }
+      }
+  
+      .home-join-container-scene {
+          position: relative; // This allows child elements with absolute positioning to be positioned relative to this container
+          height: 100%;
+          width: 100%;
+          background-color: $teal_light;
+          z-index: 2;
+        }
+    }
+  }
+  

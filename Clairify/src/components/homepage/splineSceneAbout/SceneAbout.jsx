@@ -3,6 +3,6 @@ import './scene.scss'
 
 export default function App() {
   return (
-    <Spline className="scene" scene="https://prod.spline.design/vJavtlfSkoXB2Nty/scene.splinecode" />
+    <Spline className="scene-about" scene="https://prod.spline.design/vJavtlfSkoXB2Nty/scene.splinecode" />
   );
 }

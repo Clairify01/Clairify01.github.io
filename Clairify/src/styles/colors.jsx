@@ -9,6 +9,7 @@ const colors = {
     grey_light: '#A0A3B1',
     grey_dark: '#2D2F3B',
     discord: '#7289DA',
+    paypal: '#009CDE',
 };
 
 export default colors;

@@ -13,7 +13,7 @@ const Header = () => {
           <LinkContainer to="/">
             <Nav.Link>
               <img
-                src="/img/logo.png"
+                src="/img/ClairifyLogo.png"
                 height="35"
                 className="d-inline-block align-top"
                 alt="Clarify logo"

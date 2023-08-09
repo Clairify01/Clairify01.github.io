@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import './HomeAbout.scss'
 import { LinkContainer } from 'react-router-bootstrap'
 import { BiLogoDiscordAlt } from 'react-icons/bi';
-import SceneLanding from '../splineScenes/SceneLanding';
+import SceneAbout from '../splineSceneAbout/SceneAbout';
 
 const HomeAbout = () => {
   return (
@@ -12,7 +12,7 @@ const HomeAbout = () => {
         <Col md={7} className="p-0">
           <Container className="home-about-container-scene">
             <div className="foreground-1">
-            <SceneLanding/>
+            <SceneAbout/>
             </div>
           </Container>
         </Col>
