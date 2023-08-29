@@ -8,7 +8,10 @@ import TeamPage from './pages/TeamPage'
 import DonatePage from './pages/DonatePage'
 import DiscordPage from './pages/DiscordPage'
 import ApplicationPage from './pages/ApplicationPage'
+import SkeletonMenu from './pages/notes/SkeletonMenu.jsx'
+
 import "./main.scss"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='/donate' element={ <DonatePage /> } />
       <Route path='/discord' element={ <DiscordPage /> } />
       <Route path='/apply' element={ <ApplicationPage /> } />
+      <Route path='/skeleton-menu' element={ <SkeletonMenu /> } />
     </Route>
   )
 )
